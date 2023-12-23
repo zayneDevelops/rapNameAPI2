@@ -35,6 +35,6 @@ app.get('/api/:rapperName'/*user can put in rapper name, : shows it's a query pa
    // response.json(rappers) //send json of rappers variable/object
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => { // use port that heroku is trying to use, and if not 
     console.log(`The server is running on port ${PORT}.`);
 })
